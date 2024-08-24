@@ -2,7 +2,6 @@
 
 with pkgs; [
   # General packages for development and system management
-  alacritty
   aspell
   aspellDicts.en
   bash-completion
@@ -13,6 +12,7 @@ with pkgs; [
   neofetch
   openssh
   sqlite
+  wezterm
   wget
   zip
 
@@ -22,12 +22,7 @@ with pkgs; [
   gnupg
   libfido2
 
-  # Cloud-related tools and SDKs
-  docker
-  docker-compose
-
   # Media-related packages
-  emacs-all-the-icons-fonts
   dejavu_fonts
   ffmpeg
   fd
@@ -38,9 +33,7 @@ with pkgs; [
   meslo-lgs-nf
 
   # Node.js development tools
-  nodePackages.npm # globally install npm
-  nodePackages.prettier
-  nodejs
+  fnm
 
   # Text and terminal utilities
   htop
@@ -48,14 +41,12 @@ with pkgs; [
   iftop
   jetbrains-mono
   jq
+  xq
+  lsd
   ripgrep
   tree
   tmux
   unrar
   unzip
   zsh-powerlevel10k
-
-  # Python packages
-  python39
-  python39Packages.virtualenv # globally install virtualenv
 ]

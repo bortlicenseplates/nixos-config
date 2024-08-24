@@ -41,7 +41,7 @@ in
 
     masApps = {
       "1password" = 1333542190;
-      "wireguard" = 1451685025;
+      # "wireguard" = 1451685025;
     };
   };
 
@@ -55,7 +55,7 @@ in
         file = lib.mkMerge [
           sharedFiles
           additionalFiles
-          { "emacs-launcher.command".source = myEmacsLauncher; }
+          # { "emacs-launcher.command".source = myEmacsLauncher; }
         ];
 
         stateVersion = "23.11";
@@ -73,20 +73,15 @@ in
     dock = {
       enable = true;
       entries = [
-        { path = "/Applications/Slack.app/"; }
+        # { path = "/Applications/Slack.app/"; }
+        { path = "/System/application/App Store.app/"; }
+        { path = "/System/application/1Password.app/"; }
+        { path = "/System/application/Arc.app/"; }
+        { path = "/System/Applications/Wezterm.app/"; }
         { path = "/System/Applications/Messages.app/"; }
-        { path = "/System/Applications/Facetime.app/"; }
-        { path = "${pkgs.alacritty}/Applications/Alacritty.app/"; }
-        { path = "/System/Applications/Music.app/"; }
-        { path = "/System/Applications/News.app/"; }
-        { path = "/System/Applications/Photos.app/"; }
-        { path = "/System/Applications/Photo Booth.app/"; }
-        { path = "/System/Applications/TV.app/"; }
-        { path = "/System/Applications/Home.app/"; }
-        {
-          path = toString myEmacsLauncher;
-          section = "others";
-        }
+        { path = "/System/Applications/Mail.app/"; }
+        { path = "/System/Applications/Notes.app/"; }
+        { path = "/System/Applications/System Settings.app/"; }
         {
           path = "${config.users.users.${user}.home}/.local/share/";
           section = "others";
